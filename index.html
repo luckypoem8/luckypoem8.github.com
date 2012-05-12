@@ -20,6 +20,10 @@ priority: 1.0
         <p class="date-sub-head"><a href="/about">Michael Levin</a> | {{ post.date | date: "%A, %B %d, %Y" }}</p>
         {{ post.content }}
       </div>
+  <p class="excerpt">
+    {{ post.content | strip_html | truncatewords: 1 }} &nbsp;
+    <a href="{{ post.url }}" class="read-more">read more</a>
+  </p>
     {% endif %}
   {% endfor %}
 
